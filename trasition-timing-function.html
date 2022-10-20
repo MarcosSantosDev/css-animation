@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+
+    <style>
+        .line {
+            width: 100%;
+            height: 25px;
+            background-color: blue;
+            margin-bottom: 10px;
+
+            transition: width;
+            transition-duration: 1s;
+        }
+
+        body:hover .line {
+            width: 20px;
+            background-color: blueviolet;
+        }
+
+        .ease {
+            transition-timing-function: ease;
+        }
+
+        .linear {
+            transition-timing-function: linear;
+        }
+
+        .ease-in {
+            transition-timing-function: ease-in;
+        }
+
+        .ease-out {
+            transition-timing-function: ease-out;
+        }
+        
+        .ease-in-out {
+            transition-timing-function: ease-in-out;
+        }
+
+        .cubic-bezier {
+            transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <!--
+            ease = slow -> fast -> slow
+        -->
+        <div class="line ease"></div>
+        <!--
+            linear = no variation
+        -->
+        <div class="line linear"></div>
+        <!--
+            ease-in = slow -> fast -> fast
+        -->
+        <div class="line ease-in"></div>
+        <!--
+            ease-out = fast -> fast -> slow
+        -->
+        <div class="line ease-out"></div>
+        <!--
+            ease-in-out = slow -> fast -> slow
+        -->
+        <div class="line ease-in-out"></div>
+        <!--
+            cubic-bezier = 0.175 -> 0.885 -> 0.32 -> 1.275
+        -->
+        <div class="line cubic-bezier"></div>
+    </div>
+</body>
+</html>
